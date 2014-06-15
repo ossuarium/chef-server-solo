@@ -1,6 +1,6 @@
 # Chef Skeleton Cookbook
 
-[![Apache 2.0 License](http://img.shields.io/badge/license-Apache_2.0-red.svg?style=flat)](./LICENSE.txt)
+[![All rights reserved](http://img.shields.io/badge/license-All_rights_reserved-red.svg?style=flat)](./LICENSE.txt)
 [![Dependency Status](http://img.shields.io/gemnasium/razor-x/chef-cookbook.svg?style=flat)](https://gemnasium.com/razor-x/chef-cookbook)
 [![Build Status](http://img.shields.io/travis/razor-x/chef-cookbook.svg?style=flat)](https://travis-ci.org/razor-x/chef-cookbook)
 [![Coverage Status](http://img.shields.io/coveralls/razor-x/chef-cookbook.svg?style=flat)](https://coveralls.io/r/razor-x/chef-cookbook)
@@ -39,8 +39,8 @@ your testable [Chef] cookbooks.
 ### Usage
 
 This software can be used freely, see [The Unlicense].
-The Apache License text appearing in this software is for
-demonstration purposes only and does not apply to this software.
+The copyright notices appearing in this software are for
+demonstration purposes only and do not apply to this software.
 
 1. Clone this repository or download a [release][Releases].
    - The `master` branch can be used for making cookbooks under the Apache 2.0 License.
@@ -171,19 +171,7 @@ To submit a patch:
 
 ## License
 
-Copyright replace_yyyy replace_name_of_copyright_owner
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+Copyright © replace_yyyy replace_name_of_copyright_owner
 
 ## Warranty
 
