@@ -1,12 +1,9 @@
-# Chef Skeleton Cookbook
+# Chef Skeleton Cookbook for OurTownRentals.com
 
 [![All rights reserved](http://img.shields.io/badge/license-All_rights_reserved-red.svg?style=flat)](./LICENSE.txt)
-[![Dependency Status](http://img.shields.io/gemnasium/razor-x/chef-cookbook.svg?style=flat)](https://gemnasium.com/razor-x/chef-cookbook)
-[![Build Status](http://img.shields.io/travis/razor-x/chef-cookbook.svg?style=flat)](https://travis-ci.org/razor-x/chef-cookbook)
-[![Coverage Status](http://img.shields.io/coveralls/razor-x/chef-cookbook.svg?style=flat)](https://coveralls.io/r/razor-x/chef-cookbook)
 
-Use this project freely as a base for
-your testable [Chef] cookbooks.
+Use this project as a base for
+testable OurTownRentals.com [Chef] cookbooks.
 
 [Chef]: http://www.getchef.com/chef/
 
@@ -38,18 +35,11 @@ your testable [Chef] cookbooks.
 
 ### Usage
 
-This software can be used freely, see [The Unlicense].
-The copyright notices appearing in this software are for
-demonstration purposes only and do not apply to this software.
-
-1. Clone this repository or download a [release][Releases].
-   - The `master` branch can be used for making cookbooks under the Apache 2.0 License.
-   - The `copyright` branch can be used for making proprietary cookbooks.
+1. Clone this repository.
 
 2. Customize this README.
    - Set the title and summary text.
    - Replace the Description section.
-   - Remove or update the badges.
    - Customize your requirements.
    - Add documentation for your attributes, recipes, etc.
 
@@ -60,13 +50,6 @@ demonstration purposes only and do not apply to this software.
 ````bash
 $ grep -R replace_
 ````
-
-Note that `CHANGELOG.md` is just a template for this skeleton.
-The actual changes for this project are documented in the commit history
-and summarized under [Releases].
-
-[Releases]: https://github.com/razor-x/chef-cookbook/releases
-[The Unlicense]: http://unlicense.org/UNLICENSE
 
 #### Add future update support
 
@@ -92,7 +75,7 @@ which you can then merge into your other branches.
 If you later clone your repo you will need to create the update branch again.
 
 ````bash
-$ git remote add upstream https://github.com/razor-x/chef-cookbook.git
+$ git remote add upstream git@bitbucket.org:ourtownrentals/chef-cookbook.git
 $ git fetch upstream
 $ git checkout -b chef-cookbook upstream/master
 ````
@@ -102,12 +85,10 @@ $ git checkout -b chef-cookbook upstream/master
 ### Platform
 
 - [Ubuntu](http://www.ubuntu.com/)
-- [CentOS](http://www.centos.org/)
 
 **Tested on:**
 
 - Ubuntu 14.04
-- CentOS 6.5
 
 ## Attributes
 
@@ -162,7 +143,7 @@ Please submit and comment on bug reports and feature requests.
 
 To submit a patch:
 
-1. Fork it (https://github.com/razor-x/chef-cookbook/fork).
+1. Fork it.
 2. Create your feature branch (`git checkout -b my-new-feature`).
 3. Make changes. Write and run tests.
 4. Commit your changes (`git commit -am 'Add some feature'`).
@@ -171,7 +152,7 @@ To submit a patch:
 
 ## License
 
-Copyright © replace_yyyy replace_name_of_copyright_owner
+Copyright © 2014 OurTownRentals.com
 
 ## Warranty
 
