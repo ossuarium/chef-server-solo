@@ -112,12 +112,12 @@ replace_default_recipe_description
 
 ### Source Code
 
-The [replace_cookbook source](https://github.com/replace_username/replace_cookbook)
+The [replace_cookbook source](https://bitbucket.org/ourtownrentals/chef-replace_cookbook)
 is hosted on GitHub.
 To clone the project run
 
 ````bash
-$ git clone https://github.com/replace_username/replace_cookbook.git
+$ git clone https://bitbucket.org/ourtownrentals/chef-replace_cookbook.git
 ````
 
 ### Rake
