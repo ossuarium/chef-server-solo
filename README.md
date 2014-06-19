@@ -5,8 +5,7 @@
 [![Build Status](http://img.shields.io/travis/razor-x/chef-cookbook.svg?style=flat)](https://travis-ci.org/razor-x/chef-cookbook)
 [![Coverage Status](http://img.shields.io/coveralls/razor-x/chef-cookbook.svg?style=flat)](https://coveralls.io/r/razor-x/chef-cookbook)
 
-Use this project freely as a base for
-your testable [Chef] cookbooks.
+Use this project freely as a base for your testable [Chef] cookbooks.
 
 [Chef]: http://www.getchef.com/chef/
 
@@ -54,9 +53,18 @@ demonstration purposes only and do not apply to this software.
    - Customize your requirements.
    - Add documentation for your attributes, recipes, etc.
 
-4. Everything else that should be filled in before using this skeleton
+3. Everything else that should be filled in before using this skeleton
    has been marked with the prefix `replace_`.
-   To see a list of what needs to be replaced, run
+   You can replace the placeholder cookbook name
+   and the copyright text with your own using
+
+````bash
+$ git ls-files -z | xargs -0 sed -i 's/replace_cookbook/your_cookbook/g'
+$ git ls-files -z | xargs -0 sed -i 's/replace_yyyy/yyyy/g'
+$ git ls-files -z | xargs -0 sed -i 's/replace_name_of_copyright_owner/name_of_copyright_owner/g'
+````
+
+   To see a list of what else still needs to be replaced, run
 
 ````bash
 $ grep -R replace_
@@ -124,6 +132,16 @@ replace_default_recipe_description
 
 ## Development and Testing
 
+### Source Code
+
+The [replace_cookbook source](https://github.com/replace_username/replace_cookbook)
+is hosted on GitHub.
+To clone the project run
+
+````bash
+$ git clone https://github.com/replace_username/replace_cookbook.git
+````
+
 ### Rake
 
 Run `rake -T` to see all Rake tasks.
@@ -154,7 +172,7 @@ Guard tasks have been separated into the following groups:
 - `unit`
 - `integration`
 
-By default, guard will generate documentation, lint, and run unit tests.
+By default, Guard will generate documentation, lint, and run unit tests.
 The integration group must be selected manually with `guard -g integration`.
 
 ## Contributing
