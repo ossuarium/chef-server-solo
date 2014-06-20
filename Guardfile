@@ -17,7 +17,7 @@ group :lint do
     watch(%r{(?:.+/)?\.rubocop\.yml$}) { |m| File.dirname(m[0]) }
   end
 
-  guard :foodcritic, cookbook_paths: '.' do
+  guard :foodcritic, cookbook_paths: '.', cli: '--tags ~FC003' do
     watch(%r{attributes/.+\.rb$})
     watch(%r{definitions/.+\.rb$})
     watch(%r{libraries/.+\.rb$})
