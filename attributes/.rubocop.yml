@@ -1,0 +1,7 @@
+inherit_from: ../.rubocop.yml
+
+Style/LineLength:
+  Max: 120
+
+Style/TrailingComma:
+  Enabled: false

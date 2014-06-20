@@ -13,3 +13,6 @@ Style/RegexpLiteral:
 Style/SingleSpaceBeforeFirstArg:
   Exclude:
     - metadata.rb
+
+Style/SpaceInsideHashLiteralBraces:
+  Enabled: false
