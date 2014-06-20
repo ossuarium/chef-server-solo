@@ -6,6 +6,9 @@ AllCops:
     - Rakefile
     - Thorfile
 
+Style/LineLength:
+  Max: 95
+
 Style/RegexpLiteral:
   Exclude:
     - Guardfile
