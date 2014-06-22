@@ -2,9 +2,9 @@
 
 [![All rights reserved](http://img.shields.io/badge/license-All_rights_reserved-red.svg?style=flat)](./LICENSE.txt)
 
-Use this project as a base for testable OurTownRentals.com [Chef] cookbooks.
+Forked from [chef-cookbook].
 
-[Chef]: http://www.getchef.com/chef/
+[chef-cookbook]: https://github.com/razor-x/chef-cookbook
 
 ## Description
 
@@ -12,7 +12,7 @@ Use this project as a base for testable OurTownRentals.com [Chef] cookbooks.
 
 * Dependency management with [Berkshelf].
 * [Rake], [Thor], and [Guard] tasks for included tools.
-* Documentation generation with [YARD] using [yard-chef].
+* Documentation generation with [YARD] and [knife-cookbook-doc].
 * Linting with [RuboCop] and [Foodcritic].
 * Unit testing with [ChefSpec].
 * Integration testing with [Test Kitchen].
@@ -23,6 +23,7 @@ Use this project as a base for testable OurTownRentals.com [Chef] cookbooks.
 [ChefSpec]: http://sethvargo.github.io/chefspec/
 [Foodcritic]: http://acrmp.github.io/foodcritic/
 [Guard]: http://guardgem.org/
+[knife-cookbook-doc]: https://github.com/realityforge/knife-cookbook-doc
 [Rake]: https://github.com/jimweirich/rake
 [RuboCop]: https://github.com/bbatsov/rubocop
 [Shields.io]: http://shields.io/
@@ -30,18 +31,19 @@ Use this project as a base for testable OurTownRentals.com [Chef] cookbooks.
 [Thor]: http://whatisthor.com/
 [Travis CI]: https://travis-ci.org/
 [YARD]: http://yardoc.org/index.html
-[yard-chef]: https://github.com/rightscale/yard-chef
 
 ### Usage
 
-1. Clone this repository.
+1. Clone this repository or download a release.
+   - The `master` branch can be used for making cookbooks under the Apache 2.0 License.
+   - The `copyright` branch can be used for making proprietary cookbooks.
 
-2. Customize this README.
-   - Set the title and summary text.
-   - Replace the Description section.
-   - Update the Contributing section.
-   - Customize your requirements.
-   - Add documentation for your attributes, recipes, etc.
+2. Customize `_README.md.erb`.
+   - Do not edit `README.md` directly,
+     it will be generated from `_README.md.erb` using data from `metadata.rb`.
+   - Replace things marked with `replace_`.
+   - Add your badges.
+   - Run `rake readme`.
 
 3. Everything else that should be filled in before using this skeleton
    has been marked with the prefix `replace_`.
@@ -56,6 +58,9 @@ $ git ls-files -z | xargs -0 sed -i 's/replace_cookbook/your_cookbook/g'
 ````bash
 $ grep -R replace_
 ````
+
+Note that `CHANGELOG.md` is just a template for this skeleton.
+The actual changes for this project are documented in the commit history.
 
 #### Add future update support
 
@@ -81,77 +86,20 @@ which you can then merge into your other branches.
 If you later clone your repo you will need to create the update branch again.
 
 ````bash
-$ git remote add upstream git@bitbucket.org:ourtownrentals/chef-cookbook.git
+$ git remote add upstream https://bitbucket.org/ourtownrentals/chef-cookbook.git
 $ git fetch upstream
 $ git checkout -b chef-cookbook upstream/master
 ````
 
-## Requirements
+## Source Code
 
-### Platform
-
-- [Ubuntu](http://www.ubuntu.com/)
-
-**Tested on:**
-
-- Ubuntu 14.04
-
-## Attributes
-
-Attribute      | Default           | Description
----------------|-------------------|------------
-`replace_attr` | `replace_default` | replace_default_description
-
-## Recipes
-
-### default
-
-replace_default_recipe_description
-
-## Development and Testing
-
-### Source Code
-
-The [replace_cookbook source](https://bitbucket.org/ourtownrentals/chef-replace_cookbook)
-is hosted on GitHub.
+The [chef-cookbook source](https://bitbucket.org/ourtownrentals/chef-cookbook)
+is hosted on Bitbucket.
 To clone the project run
 
 ````bash
-$ git clone https://bitbucket.org/ourtownrentals/chef-replace_cookbook.git
+$ git clone https://bitbucket.org/ourtownrentals/chef-cookbook.git
 ````
-
-### Rake
-
-Run `rake -T` to see all Rake tasks.
-
-````
-rake all                          # Run all tasks
-rake foodcritic                   # Lint Chef cookbooks
-rake kitchen:all                  # Run all test instances
-rake kitchen:default-centos-65    # Run default-centos-65 test instance
-rake kitchen:default-ubuntu-1404  # Run default-ubuntu-1404 test instance
-rake rubocop                      # Run RuboCop
-rake rubocop:auto_correct         # Auto-correct RuboCop offenses
-rake spec                         # Run RSpec code examples
-rake test                         # Run kitchen integration tests
-rake yard                         # Generate YARD Documentation
-````
-
-### Thor
-
-Run `thor -T` to see all Thor tasks.
-
-### Guard
-
-Guard tasks have been separated into the following groups:
-
-- `doc`
-- `lint`
-- `unit`
-- `integration`
-
-By default, Guard will generate documentation, lint, and run unit tests.
-The integration group must be selected manually with `guard -g integration`.
 
 ## Contributing
 
@@ -159,7 +107,7 @@ Please submit and comment on bug reports and feature requests.
 
 To submit a patch:
 
-1. Fork it.
+1. Fork it (https://bitbucket.org/ourtownrentals/chef-cookbook/fork).
 2. Create your feature branch (`git checkout -b my-new-feature`).
 3. Make changes. Write and run tests.
 4. Commit your changes (`git commit -am 'Add some feature'`).
