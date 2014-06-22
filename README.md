@@ -1,6 +1,6 @@
 # Chef Skeleton Cookbook
 
-[![All rights reserved](http://img.shields.io/badge/license-All_rights_reserved-red.svg?style=flat)](./LICENSE.txt)
+[![Apache 2.0 License](http://img.shields.io/badge/license-Apache_2.0-red.svg?style=flat)](./LICENSE.txt)
 [![Dependency Status](http://img.shields.io/gemnasium/razor-x/chef-cookbook.svg?style=flat)](https://gemnasium.com/razor-x/chef-cookbook)
 [![Build Status](http://img.shields.io/travis/razor-x/chef-cookbook.svg?style=flat)](https://travis-ci.org/razor-x/chef-cookbook)
 [![Coverage Status](http://img.shields.io/coveralls/razor-x/chef-cookbook.svg?style=flat)](https://coveralls.io/r/razor-x/chef-cookbook)
@@ -48,9 +48,9 @@ demonstration purposes only and do not apply to this software.
 2. Customize `_README.md.erb`.
    - Do not edit `README.md` directly,
      it will be generated from `_README.md.erb` using data from `metadata.rb`.
-     See the `rake` and `guard` tasks below.
-   - Update the Contributing section.
+   - Replace things marked with `replace_`.
    - Add your badges.
+   - Run `rake readme`.
 
 3. Everything else that should be filled in before using this skeleton
    has been marked with the prefix `replace_`.
@@ -102,40 +102,14 @@ $ git fetch upstream
 $ git checkout -b chef-cookbook upstream/master
 ````
 
-## Requirements
-
-### Platform
-
-- [Ubuntu](http://www.ubuntu.com/)
-- [CentOS](http://www.centos.org/)
-
-**Tested on:**
-
-- Ubuntu 14.04
-- CentOS 6.5
-
-## Attributes
-
-Attribute      | Default           | Description
----------------|-------------------|------------
-`replace_attr` | `replace_default` | replace_default_description
-
-## Recipes
-
-### default
-
-replace_default_recipe_description
-
-## Development and Testing
-
 ### Source Code
 
-The [replace_cookbook source](https://github.com/replace_username/replace_cookbook)
+The [chef-cookbook source](https://github.com/razor-x/chef-cookbook)
 is hosted on GitHub.
 To clone the project run
 
 ````bash
-$ git clone https://github.com/replace_username/replace_cookbook.git
+$ git clone https://github.com/razor-x/chef-cookbook.git
 ````
 
 ### Rake
@@ -188,7 +162,7 @@ To submit a patch:
 
 ## License
 
-Copyright © replace_yyyy replace_name_of_copyright_owner
+This is free and unencumbered software released into the public domain.
 
 ## Warranty
 
