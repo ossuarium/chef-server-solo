@@ -15,7 +15,7 @@ Use this project freely as a base for your testable [Chef] cookbooks.
 
 * Dependency management with [Berkshelf].
 * [Rake], [Thor], and [Guard] tasks for included tools.
-* Documentation generation with [YARD] using [yard-chef].
+* Documentation generation with [YARD] and [knife-cookbook-doc].
 * Linting with [RuboCop] and [Foodcritic].
 * Unit testing with [ChefSpec].
 * Integration testing with [Test Kitchen].
@@ -26,6 +26,7 @@ Use this project freely as a base for your testable [Chef] cookbooks.
 [ChefSpec]: http://sethvargo.github.io/chefspec/
 [Foodcritic]: http://acrmp.github.io/foodcritic/
 [Guard]: http://guardgem.org/
+[knife-cookbook-doc]: https://github.com/realityforge/knife-cookbook-doc
 [Rake]: https://github.com/jimweirich/rake
 [RuboCop]: https://github.com/bbatsov/rubocop
 [Shields.io]: http://shields.io/
@@ -33,7 +34,6 @@ Use this project freely as a base for your testable [Chef] cookbooks.
 [Thor]: http://whatisthor.com/
 [Travis CI]: https://travis-ci.org/
 [YARD]: http://yardoc.org/index.html
-[yard-chef]: https://github.com/rightscale/yard-chef
 
 ### Usage
 
@@ -45,13 +45,12 @@ demonstration purposes only and do not apply to this software.
    - The `master` branch can be used for making cookbooks under the Apache 2.0 License.
    - The `copyright` branch can be used for making proprietary cookbooks.
 
-2. Customize this README.
-   - Set the title and summary text.
-   - Replace the Description section.
+2. Customize `_README.md.erb`.
+   - Do not edit `README.md` directly,
+     it will be generated from `_README.md.erb` using data from `metadata.rb`.
+     See the `rake` and `guard` tasks below.
    - Update the Contributing section.
-   - Remove or update the badges.
-   - Customize your requirements.
-   - Add documentation for your attributes, recipes, etc.
+   - Add your badges.
 
 3. Everything else that should be filled in before using this skeleton
    has been marked with the prefix `replace_`.
@@ -145,10 +144,12 @@ Run `rake -T` to see all Rake tasks.
 
 ````
 rake all                          # Run all tasks
+rake doc                          # Build documentation
 rake foodcritic                   # Lint Chef cookbooks
 rake kitchen:all                  # Run all test instances
 rake kitchen:default-centos-65    # Run default-centos-65 test instance
 rake kitchen:default-ubuntu-1404  # Run default-ubuntu-1404 test instance
+rake readme                       # Generate README.md from _README.md.erb
 rake rubocop                      # Run RuboCop
 rake rubocop:auto_correct         # Auto-correct RuboCop offenses
 rake spec                         # Run RSpec code examples
