@@ -13,6 +13,11 @@ Style/LeadingCommentSpace:
 Style/LineLength:
   Max: 95
 
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%q': '{}'
+    '%Q': '{}'
+
 Style/RegexpLiteral:
   Exclude:
     - Guardfile
