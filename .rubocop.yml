@@ -28,3 +28,7 @@ Style/SingleSpaceBeforeFirstArg:
 
 Style/SpaceInsideHashLiteralBraces:
   Enabled: false
+
+Style/TrailingComma:
+  Exclude:
+    - metadata.rb
