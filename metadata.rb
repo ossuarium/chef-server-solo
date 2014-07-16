@@ -5,4 +5,18 @@ license          'All rights reserved'
 description      'Installs and configures Chef Server.'
 version          '0.0.0'
 
+supports 'Ubuntu', '12.04'
+
 recipe 'server-solo::default', 'Installs and configures Chef Server.'
+
+depends 'apt', '~> 2.4.0'
+depends 'annoyances', '~> 1.0.0'
+depends 'chef-server', '~> 2.1.6'
+depends 'chef-solo-search', '~> 0.5.1'
+depends 'firewall', '~> 0.11.8'
+depends 'logrotate', '~> 1.6.0'
+depends 'ntp', '~> 1.6.2'
+depends 'openssh', '~> 1.3.4'
+depends 'sudo', '~> 2.6.0'
+depends 'timezone-ii', '~> 0.2.0'
+depends 'users', '~> 1.7.0'

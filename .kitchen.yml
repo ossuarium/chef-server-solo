@@ -3,14 +3,24 @@ driver:
   name: vagrant
 
 provisioner:
-  name: chef_zero
+  name: chef_solo
   client_rb:
     ssl_verify_mode: :verify_peer
+  data_bags_path: test/integration/default/data_bags
+  attributes:
+    tz: 'America/Los_Angeles'
+    authorization:
+      sudo:
+        users: [vagrant]
+        passwordless: true
 
 platforms:
-  - name: ubuntu-14.04
+  - name: ubuntu-12.04
 
 suites:
   - name: default
+    driver:
+      network:
+        - ["private_network", {ip: "10.10.10.200"}]
     run_list:
       - recipe[server-solo::default]

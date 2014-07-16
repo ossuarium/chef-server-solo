@@ -6,6 +6,26 @@
 
 Installs and configures Chef Server.
 
+## Requirements
+
+### Platforms
+
+* Ubuntu (12.04)
+
+### Cookbooks:
+
+* apt (~> 2.4.0)
+* annoyances (~> 1.0.0)
+* chef-server (~> 2.1.6)
+* chef-solo-search (~> 0.5.1)
+* firewall (~> 0.11.8)
+* logrotate (~> 1.6.0)
+* ntp (~> 1.6.2)
+* openssh (~> 1.3.4)
+* sudo (~> 2.6.0)
+* timezone-ii (~> 0.2.0)
+* users (~> 1.7.0)
+
 ## Recipes
 
 * server-solo::default - Installs and configures Chef Server.
