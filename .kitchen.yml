@@ -13,4 +13,4 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[replace_cookbook::default]
+      - recipe[server-solo::default]

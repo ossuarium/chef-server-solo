@@ -1,8 +1,8 @@
-name             'replace_cookbook'
+name             'server-solo'
 maintainer       'OurTownRentals.com'
-maintainer_email 'replace_email@ourtownrentals.com'
+maintainer_email 'evan@ourtownrentals.com'
 license          'All rights reserved'
-description      'replace_description.'
+description      'Installs and configures Chef Server.'
 version          '0.0.0'
 
-recipe 'replace_cookbook::default', 'replace_description.'
+recipe 'server-solo::default', 'Installs and configures Chef Server.'
