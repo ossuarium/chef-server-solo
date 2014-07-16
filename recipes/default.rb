@@ -31,7 +31,7 @@ node.default['chef-server']['configuration']['nginx']['ssl_certificate'] =
 node.default['chef-server']['configuration']['nginx']['ssl_certificate_key'] =
   "/etc/ssl/private/#{node['fqdn']}.key"
 
-cert = Chef::EncryptedDataBagItem.load 'certificates', 'default'
+cert = Chef::EncryptedDataBagItem.load 'certificates', node['fqdn']
 
 file node['chef-server']['configuration']['nginx']['ssl_certificate'] do
   content cert['ssl_certificate']
