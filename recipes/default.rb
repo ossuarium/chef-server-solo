@@ -22,6 +22,26 @@ node.default['openssh']['server']['permit_root_login'] = 'no'
 node.default['openssh']['server']['t_c_p_keep_alive'] = 'yes'
 
 #
+# Configuration for Chef server.
+#
+
+node.default['chef-server']['configuration']['nginx']['ssl_certificate'] =
+  "/etc/ssl/private/#{node['fqdn']}.pem"
+
+node.default['chef-server']['configuration']['nginx']['ssl_certificate_key'] =
+  "/etc/ssl/private/#{node['fqdn']}.key"
+
+cert = Chef::EncryptedDataBagItem.load 'certificates', 'default'
+
+file node['chef-server']['configuration']['nginx']['ssl_certificate'] do
+  content cert['ssl_certificate']
+end
+
+file node['chef-server']['configuration']['nginx']['ssl_certificate_key'] do
+  content cert['ssl_certificate_key']
+end
+
+#
 # Include common recipes.
 #
 
