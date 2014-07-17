@@ -1,7 +1,7 @@
 name             'server-solo'
 maintainer       'OurTownRentals.com'
 maintainer_email 'evan@ourtownrentals.com'
-license          'All rights reserved'
+license          'Apache 2.0'
 description      'Installs and configures Chef Server.'
 version          '0.1.0'
 
