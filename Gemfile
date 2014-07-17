@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'chef', '~> 11.12.4'
+gem 'chef', '~> 11.12.8'
 gem 'berkshelf', '~> 3.1.2'
 
 group :development do
@@ -11,13 +11,12 @@ group :development do
   gem 'redcarpet', '~> 3.1.2'
   gem 'github-markup', '1.2.1'
 
-  gem 'rubocop', '~> 0.23.0'
-  gem 'foodcritic', '~> 3.0.3'
+  gem 'rubocop', '~> 0.24.0'
+  gem 'foodcritic', '~> 4.0.0'
 
   gem 'rake', '~> 10.3.2'
 
   gem 'thor', '~> 0.19.1'
-  gem 'thor-foodcritic', '~> 1.1.0'
 
   gem 'guard', '~> 2.6.1'
   gem 'guard-shell', '~> 0.6.1'
@@ -41,4 +40,3 @@ group :integration do
 end
 
 gem 'fuubar', '~> 2.0.0.rc1', group: [:development, :unit]
-gem 'chef-zero', '~> 2.1.5', group: [:unit, :integration]
