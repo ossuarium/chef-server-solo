@@ -3,7 +3,7 @@ maintainer       'OurTownRentals.com'
 maintainer_email 'evan@ourtownrentals.com'
 license          'Apache 2.0'
 description      'Installs and configures Chef Server.'
-version          '0.3.0'
+version          '0.4.0'
 
 supports 'Ubuntu', '12.04'
 
