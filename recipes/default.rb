@@ -49,10 +49,17 @@ cert = Chef::EncryptedDataBagItem.load 'certificates', node['fqdn']
 
 file node['chef-server']['configuration']['nginx']['ssl_certificate'] do
   content cert['ssl_certificate']
+  notifies :run, 'execute[restart-chef-server]'
 end
 
 file node['chef-server']['configuration']['nginx']['ssl_certificate_key'] do
   content cert['ssl_certificate_key']
+  notifies :run, 'execute[restart-chef-server]'
+end
+
+execute 'restart-chef-server' do
+  command 'chef-server-ctl restart'
+  action :nothing
 end
 
 #
