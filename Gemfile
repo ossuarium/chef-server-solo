@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'chef', '~> 11.12.8'
+gem 'chef', '~> 11.14.2'
 gem 'berkshelf', '~> 3.1.2'
 
 group :development do
@@ -28,9 +28,9 @@ end
 group :unit do
   gem 'rspec', '~> 3.0.0'
   gem 'chefspec', '~> 4.0.0'
-  gem 'simplecov', '~> 0.8.2'
+  gem 'simplecov', '~> 0.9.0'
   gem 'coveralls', '~> 0.7.0'
-  gem 'guard-rspec', '~> 4.2.9'
+  gem 'guard-rspec', '~> 4.3.1'
 end
 
 group :integration do
