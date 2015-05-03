@@ -10,7 +10,7 @@ AllCops:
 Style/LeadingCommentSpace:
   Enabled: false
 
-Style/LineLength:
+Metrics/LineLength:
   Max: 95
 
 Style/PercentLiteralDelimiters:

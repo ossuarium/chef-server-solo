@@ -1,6 +1,6 @@
 inherit_from: ../.rubocop.yml
 
-Style/LineLength:
+Metrics/LineLength:
   Max: 120
 
 Style/TrailingComma:
