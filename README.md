@@ -10,21 +10,21 @@ Installs and configures Chef Server.
 
 ### Platforms
 
-* Ubuntu (= 12.04)
+* Ubuntu (= 14.04)
 
 ### Cookbooks:
 
-* apt (~> 2.4.0)
+* apt (~> 2.7.0)
 * annoyances (~> 1.0.0)
-* chef-server (~> 2.1.6)
+* chef-server (~> 3.1.1)
 * chef-solo-search (~> 0.5.1)
-* firewall (~> 0.11.8)
-* logrotate (~> 1.6.0)
-* ntp (~> 1.6.2)
-* openssh (~> 1.3.4)
-* sudo (~> 2.6.0)
+* firewall (~> 1.1.0)
+* logrotate (~> 1.9.1)
+* ntp (~> 1.8.2)
+* openssh (~> 1.4.0)
+* sudo (~> 2.7.1)
 * timezone-ii (~> 0.2.0)
-* users (~> 1.7.0)
+* users (~> 1.8.2)
 
 ## Recipes
 

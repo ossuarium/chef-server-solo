@@ -45,6 +45,10 @@ node.default['chef-server']['configuration']['nginx']['ssl_certificate'] =
 node.default['chef-server']['configuration']['nginx']['ssl_certificate_key'] =
   "/etc/ssl/private/#{node['fqdn']}.key"
 
+#
+# SSL certificates.
+#
+
 cert = Chef::EncryptedDataBagItem.load 'certificates', node['fqdn']
 
 file node['chef-server']['configuration']['nginx']['ssl_certificate'] do
@@ -79,7 +83,7 @@ include_recipe 'firewall::default'
 include_recipe 'chef-server::default'
 
 #
-# Enable firewall and allow ssh and http/https.
+# Enable firewall and allow ssh and http(s).
 #
 
 firewall 'ufw' do
@@ -101,6 +105,6 @@ end
 
 firewall_rule 'https' do
   protocol :tcp
-  ports [80, 443]
+  port [80, 443]
   action :allow
 end
