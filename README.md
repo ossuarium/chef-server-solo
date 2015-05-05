@@ -6,6 +6,9 @@
 
 Installs and configures Chef Server.
 
+### Usage
+
+
 ## Requirements
 
 ### Platforms
@@ -34,7 +37,7 @@ Installs and configures Chef Server.
 
 ### Source Code
 
-The [server-solo source](https://github.com/ourtownrentals/chef-server-solo)
+The [chef-server-solo source](https://github.com/ourtownrentals/chef-server-solo)
 is hosted on GitHub.
 To clone the project run
 
@@ -42,24 +45,6 @@ To clone the project run
 $ git clone https://github.com/ourtownrentals/chef-server-solo.git
 ```
 
-### Rake
-
-Run `rake -T` to see all Rake tasks.
-
-```
-
-rake all                          # Run all tasks
-rake doc                          # Build documentation
-rake foodcritic                   # Lint Chef cookbooks
-rake kitchen:all                  # Run all test instances
-rake kitchen:default-ubuntu-1404  # Run default-ubuntu-1404 test instance
-rake readme                       # Generate README.md from _README.md.erb
-rake rubocop                      # Run RuboCop
-rake rubocop:auto_correct         # Auto-correct RuboCop offenses
-rake spec                         # Run RSpec code examples
-rake test                         # Run kitchen integration tests
-rake yard                         # Generate YARD Documentation
-```
 
 ### Thor
 

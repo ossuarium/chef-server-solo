@@ -10,7 +10,7 @@ group :development do
   gem 'yard', '~> 0.8.7.4'
   gem 'yard-redcarpet-ext', '~> 0.0.3'
   gem 'redcarpet', '~> 3.2.3'
-  gem 'github-markup', '1.3.3'
+  gem 'github-markup', '~> 1.3.3'
 
   gem 'rubocop', '~> 0.30.0'
   gem 'foodcritic', '~> 4.0.0'
@@ -35,7 +35,8 @@ group :unit do
 end
 
 group :integration do
-  gem 'test-kitchen', '1.4.0'
+  gem 'test-kitchen', '~> 1.4.0'
+  gem 'kitchen-sync', '~> 1.0.1'
   gem 'kitchen-vagrant', '~> 0.17.0'
   gem 'guard-kitchen', '~> 0.0.2'
 end
