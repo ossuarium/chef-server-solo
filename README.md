@@ -1,4 +1,4 @@
-# server-solo
+# chef-server-solo
 
 [![Apache 2.0 License](https://img.shields.io/badge/license-Apache_2.0-red.svg)](./LICENSE.txt)
 
@@ -31,7 +31,7 @@ Installs and configures Chef Server.
 
 ## Recipes
 
-* server-solo::default - Installs and configures Chef Server.
+* chef-server-solo::default - Installs and configures Chef Server.
 
 ## Development and Testing
 

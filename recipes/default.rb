@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: server-solo
+# Cookbook Name:: chef-server-solo
 # Recipe:: default
 #
 # Copyright 2014-2015 OurTownRentals.com

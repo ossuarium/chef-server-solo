@@ -1,4 +1,4 @@
-name             'server-solo'
+name             'chef-server-solo'
 maintainer       'OurTownRentals.com'
 maintainer_email 'evan@ourtownrentals.com'
 license          'Apache 2.0'
@@ -7,7 +7,7 @@ version          '0.4.0'
 
 supports 'Ubuntu', '14.04'
 
-recipe 'server-solo::default', 'Installs and configures Chef Server.'
+recipe 'chef-server-solo::default', 'Installs and configures Chef Server.'
 
 depends 'apt', '~> 2.7.0'
 depends 'annoyances', '~> 1.0.0'

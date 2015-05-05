@@ -26,4 +26,4 @@ suites:
       network:
         - ["private_network", {ip: "10.10.10.200"}]
     run_list:
-      - recipe[server-solo::default]
+      - recipe[chef-server-solo::default]
